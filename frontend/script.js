@@ -23,7 +23,7 @@ saveBtn.addEventListener('click', () => {
     return;
   }
   
-  fetch('http://localhost:3000/save-mood', {
+ fetch('https://mood-journal-backend.onrender.com/save-mood', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ function createEmojiRain(emoji) {
     }, 3000);
   }
 }
-fetch("http://localhost:3000/entries")
+fetch('https://mood-journal-backend.onrender.com/entries')
   .then(res => res.json())
   .then(data => {
      console.log("Fetched entries:", data);
