@@ -34,7 +34,7 @@ app.get('/entries', (_req, res) => {
   res.status(200).json(moodEntries);
 });
 
-// Start server
+const PORT = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`✅ Server running on http://localhost:${port}`);
 });
